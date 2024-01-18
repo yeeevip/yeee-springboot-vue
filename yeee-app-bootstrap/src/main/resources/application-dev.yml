@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/yeeee_manage7?characterEncoding=UTF-8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+    url: jdbc:mysql://127.0.0.1:3306/yeee_springboot_vue?characterEncoding=UTF-8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
     username: root
     password: root
 security:
@@ -28,4 +28,4 @@ yeee:
         enabled: true
     resource:
       exclude:
-        -
+        - /example/exclude/**
