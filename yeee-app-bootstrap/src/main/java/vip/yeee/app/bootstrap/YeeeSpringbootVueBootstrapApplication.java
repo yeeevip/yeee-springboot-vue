@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@MapperScan({"vip.yeee.app"})
+@MapperScan({"vip.yeee.app.sys.manage.domain.mysql.mapper"})
 @ComponentScan({"vip.yeee.app"})
 public class YeeeSpringbootVueBootstrapApplication {
 
