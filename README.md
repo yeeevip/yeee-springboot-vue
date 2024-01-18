@@ -6,9 +6,26 @@
 
 ## 系统介绍
 
--
--
--
+- 前后端分离Springboot + Vue
+- 使用SpringSecurity + Oauth2 + Jwt做权限认证
+- 在线文档使用Knife4j
+
+## 功能演示
+
+<table>
+    <tr>
+        <td><img src="doc/images/swagger.png"/></td>
+        <td><img src="doc/images/login.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="doc/images/menumanage.png"/></td>
+        <td><img src="doc/images/usermange.png"/></td>
+    </tr>
+    <tr>
+        <td><img src="doc/images/rolemanage.png"/></td>
+        <td><img src="doc/images/deptmanage.png"/></td>
+    </tr>
+</table>
 
 ## 快速开始
 
