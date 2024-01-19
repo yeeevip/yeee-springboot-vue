@@ -1,5 +1,5 @@
 <template>
-  <div class="mod-rsco">
+  <div class="mod-menu">
     <el-form :inline="true" :model="dataForm" @keyup.enter.native="listData()">
       <el-form-item>
         <el-input v-model="dataForm.name" placeholder="名称" clearable></el-input>
@@ -56,16 +56,13 @@
     <edit v-if="editVisible" ref="edit" @refreshDataList="listData"></edit>
     <!-- 弹窗, 详情 -->
     <info v-if="infoVisible" ref="info"></info>
-    <!-- 弹窗, 导入 -->
-    <impt v-if="imptVisible" ref="impt" @refreshDataList="listData"></impt>
   </div>
 </template>
 
 <script>
   import tableTreeColumn from '@/components/table-tree-column'
-  import edit from './rsco-edit'
-  import info from './rsco-info'
-  import impt from './rsco-impt'
+  import edit from './menu-edit'
+  import info from './menu-info'
   import grid from '@/mixins/grid'
   export default {
     mixins: [grid],
@@ -80,7 +77,7 @@
       }
     },
     components: {
-      tableTreeColumn, edit, info, impt
+      tableTreeColumn, edit, info
     }
   }
 </script>

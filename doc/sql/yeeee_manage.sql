@@ -126,7 +126,7 @@ INSERT INTO sys_menu
 VALUES(4059917154079744, 4059916341400576, '角色管理', 'sys/role/role', NULL, 'icon-geren', 10, 'view/sys/role/role.html', 0, NULL, NULL, '2019-02-11 15:42:24', NULL);
 INSERT INTO sys_menu
 (id, pid, name, url, perm, icon, seq, remark, `type`, create_time, create_by, update_time, update_by)
-VALUES(4059917584143360, 4059916341400576, '资源管理', 'sys/rsco/rsco', NULL, 'icon-editor', 15, 'view/sys/rsco/rsco.html', 0, NULL, NULL, '2019-02-11 15:42:45', NULL);
+VALUES(4059917584143360, 4059916341400576, '菜单管理', 'sys/menu/menu', NULL, 'icon-editor', 15, 'view/sys/menu/menu.html', 0, NULL, NULL, '2019-02-11 15:42:45', NULL);
 INSERT INTO sys_menu
 (id, pid, name, url, perm, icon, seq, remark, `type`, create_time, create_by, update_time, update_by)
 VALUES(4297179758302211, 4059919704003584, '修改', NULL, 'sys:param:upd', NULL, 30, NULL, 1, NULL, 'auto', NULL, 'auto');
