@@ -7,7 +7,7 @@ import user from './modules/user'
 Vue.use(Vuex)
 
 window.SITE_CONFIG = {}
-
+window.SITE_CONFIG['dynamicRoutes'] = []
 export default new Vuex.Store({
   modules: {
     common,
