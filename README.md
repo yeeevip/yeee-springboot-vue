@@ -54,7 +54,7 @@ yeee-springboot-vue
 
 - Jdk1.8
 - Mysql >= 5.7
-- NodeJS v20.11.0
+- NodeJs v16.20.2
 
 ```
 # 下载yeee-memo脚手架工程
