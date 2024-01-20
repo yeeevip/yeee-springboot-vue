@@ -6,6 +6,8 @@ import user from './modules/user'
 
 Vue.use(Vuex)
 
+window.SITE_CONFIG = {}
+
 export default new Vuex.Store({
   modules: {
     common,
