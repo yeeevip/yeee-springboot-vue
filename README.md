@@ -58,13 +58,13 @@ yeee-springboot-vue
 
 ```
 # 下载yeee-memo脚手架工程
-git clone https://github.com/yeeevip/yeee-memo.git
+git clone https://gitee.com/yeeevip/yeee-memo.git
 
 # 打包编译[JavaWeb通用脚手架]
 cd yeee-memo/memo-parent && mvn clean install
 
 # 下载yeee-springboot-vue项目
-git clone https://github.com/yeeevip/yeee-springboot-vue.git
+git clone https://gitee.com/yeeevip/yeee-springboot-vue.git
 
 # 启动springboot项目
 cd yeee-springboot-vue && mvn clean install && java -jar yeee-app-bootstrap/target/yeee-app-bootstrap-1.0.0-SNAPSHOT.jar
