@@ -61,23 +61,24 @@ yeee-springboot-vue
 git clone https://gitee.com/yeeevip/yeee-memo.git
 
 # 打包编译[JavaWeb通用脚手架]
-cd yeee-memo/memo-parent && mvn clean install
+cd yeee-memo/memo-parent 
+mvn clean install
 
 # 下载yeee-springboot-vue项目
 git clone https://gitee.com/yeeevip/yeee-springboot-vue.git
 
 # 启动springboot项目
-cd yeee-springboot-vue && mvn clean install && java -jar yeee-app-bootstrap/target/yeee-app-bootstrap-1.0.0-SNAPSHOT.jar
+cd yeee-springboot-vue 
+mvn clean install 
+java -jar yeee-app-bootstrap/target/yeee-app-bootstrap-1.0.0-SNAPSHOT.jar
 
 # 运行管理端ui
-cd yeee-springboot-vue/app-h5/yeee-admin-ui && npm install --registry=https://registry.npmmirror.com && npm run dev
+cd yeee-springboot-vue/app-h5/yeee-admin-ui 
+npm install --registry=https://registry.npmmirror.com 
+npm run dev
+
+- 管理员账号密码：admin/111111
 ```
-
-### 其他说明
-
-1. 欢迎提交 [PR](https://www.yeee.vip)
-
-2. 欢迎提交 [issue](https://github.com/yeeevip/yeee-springboot-vue/issues)，请写清楚遇到问题的原因、开发环境、复显步骤。
 
 ## 交流群
 
