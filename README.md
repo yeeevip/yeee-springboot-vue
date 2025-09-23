@@ -54,7 +54,7 @@ yeee-springboot-vue
 
 - Jdk1.8
 - Mysql >= 5.7
-- NodeJs v16.20.2
+- NodeJs >=v20
 
 ```
 # 下载yeee-memo脚手架工程
@@ -73,7 +73,7 @@ mvn clean install
 java -jar yeee-app-bootstrap/target/yeee-app-bootstrap-1.0.0-SNAPSHOT.jar
 
 # 运行管理端ui
-cd yeee-springboot-vue/app-h5/yeee-admin-ui 
+cd yeee-springboot-vue/app-h5/yeee-admin-ui-vue3 
 npm install --registry=https://registry.npmmirror.com 
 npm run dev
 
