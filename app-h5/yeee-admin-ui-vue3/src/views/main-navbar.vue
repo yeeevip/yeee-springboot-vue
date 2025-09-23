@@ -36,7 +36,7 @@
             </span>
             <template #dropdown>
               <el-dropdown-menu>
-                <el-dropdown-item v-if="$hasPerm('sys:user:updPwd')" @click="updatePasswordHandle()">修改密码</el-dropdown-item>
+                <el-dropdown-item @click="updatePasswordHandle()">修改密码</el-dropdown-item>
                 <el-dropdown-item @click="logoutHandle()">退出</el-dropdown-item>
               </el-dropdown-menu>
             </template>

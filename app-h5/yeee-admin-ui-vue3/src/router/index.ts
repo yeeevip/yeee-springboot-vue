@@ -31,18 +31,18 @@ const _import = (path: string) => {
   // 动态导入其他组件，使用 try-catch 处理可能的导入错误
   try {
     const fullPath = `@/views/${path}.vue`
-    console.log(`[_import] 尝试动态导入组件: ${fullPath}`)
-    
+    // console.log(`[_import] 尝试动态导入组件: ${fullPath}`)
+
     // 使用 Vite 支持的动态导入模式
     const modules = import.meta.glob('@/views/**/*.vue')
     const moduleKey = `/src/views/${path}.vue`
-    
+
     if (modules[moduleKey]) {
-      console.log(`[_import] 找到模块: ${moduleKey}`)
+      // console.log(`[_import] 找到模块: ${moduleKey}`)
       return modules[moduleKey]
     } else {
       console.warn(`[_import] 组件不存在: ${fullPath}，使用404页面`)
-      console.log(`[_import] 可用的模块:`, Object.keys(modules).filter(key => key.includes('sys')))
+      // console.log(`[_import] 可用的模块:`, Object.keys(modules).filter(key => key.includes('sys')))
       return () => import('@/views/common/404.vue')
     }
   } catch (error) {
@@ -114,7 +114,7 @@ router.beforeEach((to, from, next) => {
           next({ ...to, replace: true })
         } else {
           sessionStorage.setItem('menuList', '[]')
-          
+
         // 同步更新到 store
         const commonStore = useCommonStore()
         commonStore.updateMenuList([])
@@ -177,19 +177,19 @@ function fnAddDynamicMenuRoutes (menuList: any[] = [], routes: RouteRecordRaw[] 
       } else {
         // 尝试加载动态组件，如果失败则使用404页面
         let componentPath = menuList[i].url
-        console.log(`[路径转换] 原始URL: "${componentPath}"`)
-        
+        // console.log(`[路径转换] 原始URL: "${componentPath}"`)
+
         if (componentPath.includes('/')) {
           // 处理类似 sys-user/user 的路径，转换为 modules/sys/user/user
-          console.log(`[路径转换] 包含斜杠，进行转换`)
+          // console.log(`[路径转换] 包含斜杠，进行转换`)
           componentPath = componentPath.replace(/^sys-/, 'sys/')
           componentPath = `modules/${componentPath}`
         } else {
-          console.log(`[路径转换] 不包含斜杠，添加modules前缀`)
+          // console.log(`[路径转换] 不包含斜杠，添加modules前缀`)
           componentPath = `modules/${componentPath}`
         }
-        console.log(`[路径转换] 最终路径: "${componentPath}"`)
-        console.log(`动态路由生成: url=${menuList[i].url}, componentPath=${componentPath}, name=${String(route.name)}`)
+        // console.log(`[路径转换] 最终路径: "${componentPath}"`)
+        // console.log(`动态路由生成: url=${menuList[i].url}, componentPath=${componentPath}, name=${String(route.name)}`)
         route.component = _import(componentPath)
       }
       routes.push(route)
@@ -203,10 +203,10 @@ function fnAddDynamicMenuRoutes (menuList: any[] = [], routes: RouteRecordRaw[] 
     router.addRoute(mainRoutes)
     router.addRoute({ path: '/:pathMatch(.*)*', redirect: { name: '404' } })
     sessionStorage.setItem('dynamicMenuRoutes', JSON.stringify(mainRoutes.children || '[]'))
-    console.log('\n')
-    console.log('%c!<-------------------- 动态(菜单)路由 s -------------------->', 'color:blue')
-    console.log(mainRoutes.children)
-    console.log('%c!<-------------------- 动态(菜单)路由 e -------------------->', 'color:blue')
+    // console.log('\n')
+    // console.log('%c!<-------------------- 动态(菜单)路由 s -------------------->', 'color:blue')
+    // console.log(mainRoutes.children)
+    // console.log('%c!<-------------------- 动态(菜单)路由 e -------------------->', 'color:blue')
   }
 }
 

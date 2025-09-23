@@ -8,20 +8,6 @@
         <div class="login-body">
           <h3 class="login-title">登录</h3>
           <el-form :model="dataForm" :rules="dataRule" ref="dataFormRef" @keyup.enter="dataFormSubmitHandle()" status-icon>
-            <!-- <el-form-item prop="username">
-              <el-input v-model="dataForm.username" :placeholder="账号">
-                <span slot="prefix" class="el-input__icon">
-                  <svg aria-hidden="true"><use xlink:href="#icon-user"></use></svg>
-                </span>
-              </el-input>
-            </el-form-item>
-            <el-form-item prop="password">
-              <el-input v-model="dataForm.password" type="password" :placeholder="密码">
-                <span slot="prefix" class="el-input__icon">
-                  <svg aria-hidden="true"><use xlink:href="#icon-lock"></use></svg>
-                </span>
-              </el-input>
-            </el-form-item> -->
             <el-form-item prop="username">
               <el-input v-model="dataForm.username" placeholder="帐号">
                 <template #prefix>
