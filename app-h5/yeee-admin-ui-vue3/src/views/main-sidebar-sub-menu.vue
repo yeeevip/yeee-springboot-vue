@@ -7,12 +7,12 @@
       <svg class="icon-svg aui-sidebar__menu-icon" aria-hidden="true"><use :xlink:href="`#${menu.icon}`"></use></svg>
       <span>{{ menu.name }}</span>
     </template>
-    <SubMenu
+    <MainSidebarSubMenu
       v-for="item in menu.children"
       :key="item.id"
       :menu="item"
       :dynamicMenuRoutes="dynamicMenuRoutes">
-    </SubMenu>
+    </MainSidebarSubMenu>
   </el-sub-menu>
   <el-menu-item v-else :index="menu.id + ''" @click="gotoRouteHandle(menu)">
     <svg class="icon-svg aui-sidebar__menu-icon" aria-hidden="true"><use :xlink:href="`#${menu.icon}`"></use></svg>
@@ -20,13 +20,10 @@
   </el-menu-item>
 </template>
 
-<script setup lang="ts">
-import { computed, defineAsyncComponent } from 'vue'
+<script setup lang="ts" name="MainSidebarSubMenu">
+import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCommonStore } from '@/stores/common'
-
-// 递归组件自引用
-const SubMenu = defineAsyncComponent(() => import('./main-sidebar-sub-menu.vue'))
 
 // Props
 interface Props {
