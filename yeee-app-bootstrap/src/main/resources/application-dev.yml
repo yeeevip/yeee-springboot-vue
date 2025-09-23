@@ -29,3 +29,4 @@ yeee:
     resource:
       exclude:
         - /example/exclude/**
+        - /dist/**

@@ -46,7 +46,7 @@ import { reactive, computed, ref, getCurrentInstance } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage, type FormInstance } from 'element-plus'
 import debounce from 'lodash/debounce'
-import md5 from 'js-md5'
+import { md5 } from 'js-md5'
 
 const router = useRouter()
 const instance = getCurrentInstance()
@@ -80,7 +80,7 @@ const dataFormSubmitHandle = debounce(function () {
 
   dataFormRef.value.validate((valid) => {
     if (!valid) {
-      return false
+      return
     }
     $http.form().post('/manage/sys-user/login', {
       username: dataForm.username,
